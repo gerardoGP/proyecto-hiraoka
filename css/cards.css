@@ -1,37 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-* {
-  box-sizing: border-box;
-}
-body {
+.toolbar {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  background-color: #f7f8fc;
-  font-family: "Roboto", sans-serif;
-  color: #10182f;
+  justify-content: right;
+  background-color: #fff;
+  height: 50px;
+  margin: 20px;
+  padding-right: 20px;
 }
-.container {
-  display: flex;
-  width: 1040px;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+.toolbar a {
+  margin: 15px 5px;
+}
+.toolbar div {
+  margin: 15px 10px;
+  cursor: pointer;
+}
+.toolbar div > * {
+  pointer-events: none;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+.card-container.list {
+  grid-template-columns: 1fr;
 }
 .card {
+  width: calc(100% - 20px);
+  display: flex;
   margin: 10px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 300px;
   padding-bottom: 10px;
 }
-
 .card-header img {
   width: 100%;
   object-fit: cover;
 }
-
 .card-body {
   display: flex;
   flex-direction: column;
@@ -58,9 +64,9 @@ h4, h5 {
     text-align: center;
 }
 .card-body p {
-  font-size: 13px;
-  color: gray;
-  margin: 10px 0;
+	font-size: 13px;
+	color: gray;
+	margin: 10px 0;
 }
 .price {
     color: red;
